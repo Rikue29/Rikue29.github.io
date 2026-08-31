@@ -242,15 +242,15 @@
     </div>
     <p style="margin:0 0 46px;max-width:620px;font-size:15px;line-height:1.6;color:rgba(245,233,233,.72)">Open a record to see the full write-up, stack and demo.</p>
 
-    <div data-carousel="" style="position:relative;max-width:1240px;transition:opacity 220ms ease, filter 220ms ease;opacity: {{ gridOpacity }};filter: {{ gridFilter }}">
-      <div data-track-vp="" style="overflow:hidden;height:min(64vh,500px)">
+    <div data-carousel="" style="position:relative;max-width:860px;transition:opacity 220ms ease, filter 220ms ease;opacity: {{ gridOpacity }};filter: {{ gridFilter }}">
+      <div data-track-vp="" style="overflow:hidden;height:min(58vh,460px)">
         <div style="display:flex;height:100%;transition:transform 380ms cubic-bezier(.2,.85,.2,1);transform: {{ trackX }}">
           <sc-for list="{{ pages }}" as="pg" hint-placeholder-count="5">
             <div data-slide="" style="flex:0 0 100%;min-width:0;height:100%;padding:0 10px;display:flex;flex-direction:column;gap:16px">
               <sc-for list="{{ pg.items }}" as="p" hint-placeholder-count="1">
             <article data-card="" style="position:relative;flex:1 1 0;min-height:0;display:flex;flex-direction:{{ p.dir }};background:#f5e9e9;color:#0d0d0d;clip-path:polygon(0 0, 100% 12px, 100% 100%, 0 calc(100% - 12px));transition:transform 200ms cubic-bezier(.2,.8,.2,1), box-shadow 200ms" style-hover="transform:translate3d(0,-5px,0) rotate(-.4deg);box-shadow:12px 12px 0 #c1121f">
               <div style="position:relative;flex:{{ p.imgFlex }};min-width:0;min-height:0;background:#0d0d0d;overflow:hidden">
-                <image-slot id="{{ p.slotId }}" shape="rect" fit="contain" placeholder="{{ p.slotHint }}"></image-slot>
+                <image-slot id="{{ p.slotId }}" shape="rect" fit="cover" placeholder="{{ p.slotHint }}"></image-slot>
                 <span aria-hidden="true" style="position:absolute;top:10px;left:10px;width:44px;height:44px;background:#c1121f;color:#fff;display:flex;align-items:center;justify-content:center;transform:rotate(-7deg);font-family:Anton, Impact, sans-serif;font-size:21px;pointer-events:none">{{ p.rank }}</span>
                 <span data-tear="" aria-hidden="true" style="{{ p.tear }}"></span>
               </div>
